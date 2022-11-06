@@ -1,0 +1,225 @@
+:root{
+    --color-primary:#6f6af8;
+    --color-red: #da0f3f;
+    --color-red-light: hsl(346, 87%, 46%, 15%);
+    --color-green: #00c476;
+    --color-green-light: hsl(156, 100%, 38%, 15%);
+    --color-gray-900: #1e1e66;
+    --color-gray-200: rgba(242, 242, 254, 0.7);
+    --color-white: #f2f2fe;
+    --color-bg: midnightblue;
+    
+
+    --transition: all 300ms ease;
+
+    --container-width-lg: 74%;
+    --container-width-md: 88%;
+    --form-width: 40%;
+
+
+    --card-border-radius-2: 0.5rem;
+  
+}
+
+/* ####################################################################
+General ############################################*/
+
+*{
+    margin:0;
+    padding:0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+body{
+    font-family:  'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-white);
+    overflow-x: hidden;
+    background: var(--color-bg);
+    font-size: 0.9rem;
+}
+.container{
+    width: var(--container-width-lg);
+    max-width: 1800px;
+    margin-inline: auto;
+}
+section{
+    margin-top: 3rem;
+    width: 100vw;
+}
+.section__extra-margin{
+    margin-top: 7rem;
+}
+h1,h2,h3,h4,h5{
+    color: var(--color-white);
+    line-height: 1.3;
+}
+h1{
+    font-size: 3rem;
+    margin:1rem 0;
+}
+h2{
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+h3{
+    font-size: 1.1rem;
+    margin: 0.8rem 0 0.5rem;
+}
+h4{
+    font-size: 1rem;
+}
+a{
+    color:var(--color-white);
+    transition:var(--transition);
+}
+
+/*###########################################################
+Button STYLES###############################*/
+
+.btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-bg);
+}
+
+.btn:hover{
+    background: var(--color-bg);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+small a{
+    color:var(--color-white);
+}
+
+
+
+ /*###########################################################
+GENERAL FORM  ###############################*/
+
+.form__section{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.form__section-container{
+    width: var(--form-width);
+}
+.alert__message{
+    padding: 0.8rem  1.4rem;
+    margin-bottom: 1rem;
+    border-radius: var(--card-border-radius-2);
+}
+
+.alert__message.error{
+    background: var(--color-red-light);
+    color: var(--color-red);
+}
+
+.alert__message.success{
+    background: var(--color-green-light);
+    color: var(--color-green);
+}
+.alert__message.lg{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:0.4rem;
+}
+
+.form__control{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.form__control.inline{
+    flex-direction: row;
+    align-items: center;
+}
+input,textarea, select{
+    padding: 0.8rem 1.4rem;
+    background: var(--color-gray-900);
+    border-radius: var(--card-border-radius-2);
+    resize: none;
+    color:var(--color-white)
+
+}
+.form__section small{
+    margin-top: 1rem;
+    display: block;
+}
+.form__section small a{
+    color: var(--color-bg);
+}
+.form__section button {
+    margin-top: 1rem;
+}
+
+
+
+/*###########################################################
+Media Queries (Medium Screen) ###############################*/
+
+@media screen and (max-width: 1024px) {
+ /*###########General Styles ############*/
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        width: var(--container-width-md);
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    h5{
+        font-size: 0.8rem;
+    }
+
+   
+  /*###########################################################
+GENERAL FORM    ###############################*/
+.form__section-container{
+    padding: 3rem;
+}
+}
+
+ 
+/*###########################################################
+Media Queries (small Screen) ###############################*/
+@media screen and (max-width: 600px) {
+
+    section{
+    margin-top: 2rem;
+    overflow-x: hidden;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    
+   
+
+    /*###########################################################
+GENERAL FORM    ###############################*/
+
+.form__section-container{
+    padding: 0;
+}
+
+
+}

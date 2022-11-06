@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --after-content :'2';
+}
+body{
+    width: 100vw;
+}
+header{
+    position: fixed;
+    left: 0;
+    right:0;
+    height: 12vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cart-box{
+    width: 26% !important;
+    left: 72%;
+    top: 25%;
+    position: absolute;
+    left: 72%;
+    top: 25%;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+ h2{
+    font-size: x-large;
+    padding: 15px 10px;
+}
+.cart-wrapper{
+    overflow-y: auto;
+    max-height: 350px;
+}
+.subtotal{
+    text-align: right;
+    padding:5%;
+}
+.checkout, .view-cart{
+    width: 95%;
+    text-align: center;
+    cursor:pointer;
+    background-color: midnightblue;
+    font-size: large;
+    color: white;
+    margin: 10px auto;
+    padding: 10px 15px;
+}
+.view-cart{
+    background-color: white;
+    border: 1px solid midnightblue;
+    color: midnightblue;
+}
+.cart-item{
+    display: grid;
+    grid-template-columns: 3fr 6fr 1fr;
+    padding:5% 2%;
+    border-bottom: 1px solid lightgrey ;
+}
+.cart-item img{
+    width:100%;
+}
+.cart-item .details{
+    padding-left: 10%;
+}
+.cart-item h3{
+    text-align: left;
+    margin-bottom: 5%;
+}
+.cart-item .price{
+    display: block;
+    text-align: right;
+    margin-top: 35%;
+}
+.cart-icon{
+    text-align: right;
+}
+.quantity{
+    display: block;
+    margin-top: 5%;
+}
+.close{
+    color:red;
+}
+.cart{
+    font-size: 30px;
+}
+.cancel{
+    text-align: right;
+}
+.whole-cart-window{
+    border-top: none;
+    border: 1px solid lightgray;
+    position: fixed;
+    top: 12vh;
+    background-color: white;
+}
+.hide{
+    display: none;
+}
+.non-empty::after{
+    z-index: 2;
+    content: var(--after-content);
+    font-size: 25px;
+    width: 25px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    right: 20%;
+    background-color: red;
+    border-radius: 50%;
+}

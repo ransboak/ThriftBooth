@@ -1,0 +1,280 @@
+:root{
+
+
+    --container-width-lg: 74%;
+    --container-width-md: 88%;
+    --form-width: 40%;
+
+    --card-border-radius-1: 0.3rem;
+    --card-border-radius-2: 0.5rem;
+    --card-border-radius-3: 0.8rem;
+    --card-border-radius-4: 2rem;
+    --card-border-radius-5: 5rem;
+}
+
+/* ####################################################################
+General ############################################*/
+
+*{
+    margin:0;
+    padding:0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+body{
+    font-family:  'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-gray-200);
+    overflow-x: hidden;
+    background: var(--color-bg);
+    font-size: 0.9rem;
+}
+
+
+/*#########################################################
+# CATEGORY #############################################*/
+
+.category__button{
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-3);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.category__button:hover{
+    color: var(--color-white);
+}
+
+.dashboard__container a{
+    color: black;
+}
+.dashboard__container li{
+    display: flex;
+    flex-direction: row;
+}
+/*###########################################################
+Button STYLES###############################*/
+
+.btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-primary);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+}
+.btn.sm{
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+.btn.danger{
+    background: var(--color-red);
+}
+.btn:hover{
+    background: var(--color-white);
+    color: var(--color-bg);
+}
+
+
+
+/*###########################################################
+SINGLE POST    ###############################*/
+
+.singlepost{
+    margin: 6rem 0 2rem;
+}
+.singlepost__container{
+    width: var(--form-width);
+    background: var(--color-gray-900);
+    padding: 1rem 2rem 2rem;
+}
+
+.singlepost__thumbnail{
+    margin: 1rem;
+}
+.singlepost__container p{
+    margin-top: 1rem;
+    line-height: 1.7;
+}
+
+
+
+ /*###########################################################
+CATEGORY POSTS   ###############################*/
+
+.category__title{
+    height: 15rem;
+    background: var(--color-gray-900);
+    margin-top: 4.5rem;
+    display: grid;
+    place-items: center;
+
+}
+
+
+
+
+
+ 
+/*###########################################################
+DASH BOARD ###############################*/
+
+.dashboard{
+    margin-top: 6rem ;
+}
+.dashboard__container{
+    display: grid;
+    grid-template-columns: 14rem auto;
+    gap: 1rem;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    border: 1px solid midnightblue;
+    border-radius: 4rem;
+}
+
+.dashboard main {
+    margin-left: 100px;
+}
+.dashboard main h2{
+    margin: 0 0 2rem 0;
+    line-height: 1;
+}
+.dashboard main table{
+    width: 1000px;
+    text-align: left;
+}
+
+.dashboard main table th {
+    background: black;
+    padding: 0.8rem;
+    color: var(--color-white);
+}
+.dashboard main table td{
+    background: var(--color-gray-700);
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--color-gray-200);
+    color: var(--color-white);
+}
+.dashboard main table tr td{
+    margin-left: 3rem;
+}
+.dashboard aside {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+
+#cart-container table{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+#cart-container table thead{
+    font-weight: 700;
+}
+#cart-container table thead td{
+    background: midnightblue;
+    color: white;
+    border: none;
+    padding: 6px 0;
+}
+#cart-container img{
+    width: 120px;
+    height: 100px;
+}
+.number{
+    width: 25%;
+    padding-left: 1;
+
+}
+#cart-container table td{
+    border: 1px solid #b6b3b3;
+    text-align: center;
+}
+#cart-container table td:nth-child(1){
+    width: 100px;
+}
+#cart-container table td:nth-child(2),
+ #cart-container table td:nth-child(3){
+   width: 200px;
+}
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6){
+    width: 170px;
+ }
+
+/*###########################################################
+Media Queries (Medium Screen) ###############################*/
+
+@media screen and (max-width: 1024px) {
+ /*###########General Styles ############*/
+   
+
+ /*###########################################################
+DASHBOARD   ###############################*/
+
+.dashboard__container{
+    grid-template-columns: 4.5rem auto;
+    padding: 0;
+    background: transparent;
+}
+.dashboard main table td{
+    background: transparent;
+}
+
+.dashboard aside h5 {
+    display: none;
+}
+.dashboard main table thead {
+    display: none;
+}
+.dashboard main table tr {
+    display: flex;
+    flex-direction: column;
+}
+
+}
+
+/*###########################################################
+Media Queries (small Screen) ###############################*/
+@media screen and (max-width: 600px) {
+
+   
+ /*###########################################################
+DASHBOARD   ###############################*/
+
+.dashboard{
+    margin-top: 5rem;
+}
+.dashboard__container{
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+.dashboard main {
+    margin: 0;
+}
+.dashboard main h2{
+    margin-top:  1rem;
+}
+.dashboard aside {
+    position: fixed;
+    box-shadow: 2rem 0 4rem rgba(0, 0, 0, 0.4);
+    left: -100%;
+    height: 100vh;
+    transition: var(--transition);
+    background: var(--color-primary);
+}
+}
